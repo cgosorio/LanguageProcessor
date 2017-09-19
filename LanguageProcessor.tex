@@ -1,19 +1,28 @@
 \documentclass{beamer}
 \usetheme{Boadilla}
 \title{Language Processor Introduction 1}
-\subtitle{Dr. César Ignacio García Osorio \\ cgosorio@ubu.es}
-\author{Cao, Thi Huyen(Lilli-L3I2) \\ caothivananh98@gmail.com}
+\subtitle{Dr. C\'esar Ignacio Garc\'{\i}a Osorio \\ \href{mailto:cgosorio@ubu.es}{cgosorio@ubu.es}}
+\author{Cao, Thi Huyen(Lilli-L3I2) \\ \href{mailto:caothivananh98@gmail.com}{caothivananh98@gmail.com}}
 \institute{University of Burgos}
 \date{\today}
+
+
 \begin{document}
+
+
 \begin{frame}
 \titlepage
 \end{frame}
 
+
 \begin{frame}
 \frametitle{Introduction to Language Processor}
-\includegraphics[scale=0.6]{1.jpg}
+\begin{center}
+\includegraphics[scale=0.5]{1}
+\end{center}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Language Processor}
 \begin{block}{Definition}
@@ -23,13 +32,19 @@ Emilio Vivancos
 Rubio, Universidad Politécnica de Valencia
 \href{https://www.youtube.com/watch?v=aT5EGLgJs88/}{\underline{https://www.youtube.com/watch?v=aT5EGLgJs88}}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Compiler}
 \begin{block}{Definition}
 A compiler is a program, which translates a program called source program, which is written in a language called source language into a target program of target language. In addition a compiler emits some error messages
 \end{block}
-\includegraphics[scale=0.7]{2.jpg}
+\begin{center}
+\includegraphics[scale=0.5]{2}
+\end{center}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Field of use 1}
 \begin{block}{Usage}
@@ -43,10 +58,12 @@ Compiler building techniques are used in many different fields
 \item Macro languages of extensible applications(Scheme in the world of GNU and Visual Basic for applications in the world of Microsoft Windows)
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Field of use 2}
 \begin{itemize}
-\item Script languages and "glue" languages ( perl, tcl/tk, python) allows rapid development of applications with parts written in different languages
+\item Script languages and ``glue'' languages ( perl, tcl/tk, python) allows rapid development of applications with parts written in different languages
 \item Analyse of configuration file requires in a lot of modern systems( file .ini of Microsoft Window or source files of X)
 \item Silicon circuit compiler (for special languages, which describe the layout of printed circuit, obtain the mask for getting the circuit through photographic techniques
 \item Query languages for databases
@@ -57,6 +74,8 @@ Compiler building techniques are used in many different fields
 \href{https://en.wikipedia.org/wiki/Cascading_Style_Sheets}{\underline{CSS}}
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Field of use 3}
 \begin{itemize}
@@ -65,6 +84,8 @@ Compiler building techniques are used in many different fields
 \item Bioinformatics Grammars are used to defined languages and more precise grammar are used to model the structure of RNA sequences
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{A small view of history 1}
 \begin{itemize}
@@ -73,12 +94,16 @@ Compiler building techniques are used in many different fields
 \item
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{A small view of history 2}
 \begin{itemize}
 \item
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{A small view of history 3}
 \begin{itemize}
@@ -88,12 +113,16 @@ Compiler building techniques are used in many different fields
 \end{itemize}
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{A small view of history 4}
 \begin{itemize}
 \item
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Use of high level languages}
 \begin{block}{Information}
@@ -113,6 +142,8 @@ Easy to clean &\\
 \end{tabular}
 \end{table}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Intepreter vs Compiler}
 \begin{itemize}
@@ -137,10 +168,16 @@ Sufficient in developing and debugging& Sufficient when there is no more error (
 \end{tabular}
 \end{table}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Structure of a compiler 1}
-\includegraphics[scale=0.5]{3.jpg}
+\begin{center}
+\includegraphics[scale=0.5]{3}
+\end{center}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Structure of a compiler 2}
 The compilation process can be divided into some phases, which simultaneously or consecutively transforms the source program from one represtation to another.
@@ -151,10 +188,14 @@ In practice, some phases can be grouped together and temporatory representations
 (\textbf{middle end} = generation of intermediate code\\
 \textbf{back end} = opt. intermediate code + gen. code + opt. code\\
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Structure of a compiler 3}
 The front-end(analysis or intitial stage) depends mainly on the source language, is designed properly. It's possible to use different back-end(synthesis or final stage) because it includes the phrases, which depend on the target machines. So that the code can be run in different machines
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Analyse}
 \end{frame}
@@ -166,21 +207,30 @@ The front-end(analysis or intitial stage) depends mainly on the source language,
 A compiler has to have a certain behavior against erroneous programs. This process is grouped in a phase called error handler. Each of the previous phases interacts with the error manager
 \end{frame}
 \begin{frame}
-\frametitle{Administrator of table of symbols}
+\frametitle{Table of symbols manager}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Compiling process 1}
-\includegraphics[scale=0.3]{5.jpg}
-\\
-analizador lexico: lexical analyser,analizador sentactico: syntax analyser,analizador semantico: semantic analyser\\
-Generador de código intermedio: intermediate code generator\\
-optimizador de código intermedio: intermediate code optimizer\\
-Generador de código: code generator\\
+\begin{center}
+\includegraphics[scale=0.48]{5}
+\end{center}
+%analizador lexico: lexical analyser,analizador sentactico: syntax analyser,analizador semantico: semantic analyser\\
+%Generador de código intermedio: intermediate code generator\\
+%optimizador de código intermedio: intermediate code optimizer\\
+%Generador de código: code generator\\
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Working environment of a compiler}
-\includegraphics[scale=0.5]{4.jpg}
+\begin{center}
+\includegraphics[scale=0.5]{4}
+\end{center}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Consruction of a compiler}
 In building a compiler, there are several approaches, which are:
@@ -190,6 +240,8 @@ In building a compiler, there are several approaches, which are:
 \item using compiler building tools like Flex, Bison, JavaCC, JJTree, JTB
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Tools}
 \begin{itemize}
@@ -207,6 +259,8 @@ In building a compiler, there are several approaches, which are:
 \end{itemize}
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Tools}
 \begin{itemize}
@@ -224,6 +278,8 @@ In building a compiler, there are several approaches, which are:
 \end{itemize}
 \end{itemize}
 \end{frame}
+
+
 \begin{frame}
 \frametitle{Tools}
 \begin{itemize}
@@ -243,4 +299,6 @@ In building a compiler, there are several approaches, which are:
 \end{itemize}
 \end{itemize}
 \end{frame}
+
+
 \end{document}
